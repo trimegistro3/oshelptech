@@ -1,0 +1,6 @@
+syntax = "proto3";
+package helptech.auth;
+option go_package = "helptech/proto/auth";
+service AuthService { rpc ValidateToken (ValidateTokenRequest) returns (ValidateTokenResponse); }
+message ValidateTokenRequest { string token = 1; }
+message ValidateTokenResponse { bool valid = 1; uint64 user_id = 2; string email = 3; }
