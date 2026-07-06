@@ -1,6 +1,0 @@
-syntax = "proto3";
-package helptech.financeiro;
-option go_package = "helptech/proto/financeiro";
-service FinanceiroService { rpc GetPagamento (GetPagamentoRequest) returns (PagamentoResponse); }
-message GetPagamentoRequest { uint64 id = 1; }
-message PagamentoResponse { uint64 id = 1; uint64 ordem_id = 2; double valor = 3; string status = 4; }
