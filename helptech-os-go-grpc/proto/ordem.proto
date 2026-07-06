@@ -1,0 +1,6 @@
+syntax = "proto3";
+package helptech.ordem;
+option go_package = "helptech/proto/ordem";
+service OrdemService { rpc GetOrdem (GetOrdemRequest) returns (OrdemResponse); }
+message GetOrdemRequest { uint64 id = 1; }
+message OrdemResponse { uint64 id = 1; uint64 cliente_id = 2; string status = 3; double valor = 4; }
