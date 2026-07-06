@@ -1,0 +1,6 @@
+syntax = "proto3";
+package helptech.cliente;
+option go_package = "helptech/proto/cliente";
+service ClienteService { rpc GetCliente (GetClienteRequest) returns (ClienteResponse); }
+message GetClienteRequest { uint64 id = 1; }
+message ClienteResponse { uint64 id = 1; string nome = 2; string email = 3; }
